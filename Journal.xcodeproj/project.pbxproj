@@ -7,8 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D7D3DF0214D91EA00AEC329 /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D3DEF214D91EA00AEC329 /* LogEntry.swift */; };
+		8D7D3DF3214D921000AEC329 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D3DF2214D921000AEC329 /* AnyEncodable.swift */; };
+		8D7D3DF5214D922100AEC329 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D3DF4214D922100AEC329 /* LogLevel.swift */; };
+		8D7D3DF8214D9CBF00AEC329 /* JSONLogSerializerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D3DF7214D9CBF00AEC329 /* JSONLogSerializerTests.swift */; };
+		8D7D3DFA214DA67500AEC329 /* DefaultSerializationFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D3DF9214DA67500AEC329 /* DefaultSerializationFileProvider.swift */; };
+		8D7D3DFD214DB3A200AEC329 /* SerializationFileProviderMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D3DFC214DB3A200AEC329 /* SerializationFileProviderMock.swift */; };
+		8D7D3E00214DBE7500AEC329 /* json_log_test_single.log in Resources */ = {isa = PBXBuildFile; fileRef = 8D7D3DFF214DBE7500AEC329 /* json_log_test_single.log */; };
+		8D7D3E02214DC1C000AEC329 /* json_log_test_multiple.log in Resources */ = {isa = PBXBuildFile; fileRef = 8D7D3E01214DC1C000AEC329 /* json_log_test_multiple.log */; };
+		8D7D3E05214DCAA000AEC329 /* XCTestCase+Wait.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7D3E04214DCAA000AEC329 /* XCTestCase+Wait.swift */; };
+		8D9D3EAD213D1D0E00087E46 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EAC213D1D0E00087E46 /* Logger.swift */; };
+		8D9D3EAF213D1D2200087E46 /* Journal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EAE213D1D2200087E46 /* Journal.swift */; };
+		8D9D3EB1213D234600087E46 /* LogSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EB0213D234600087E46 /* LogSerializer.swift */; };
+		8D9D3EB3213D235800087E46 /* JSONLogSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EB2213D235800087E46 /* JSONLogSerializer.swift */; };
+		8D9D3EEF213D312800087E46 /* LogMacros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EEE213D312800087E46 /* LogMacros.swift */; };
+		8D9D3EF1213D319000087E46 /* JournalProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EF0213D319000087E46 /* JournalProvider.swift */; };
+		8D9D3EF3213DCD8F00087E46 /* SerializationFileProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EF2213DCD8F00087E46 /* SerializationFileProvider.swift */; };
+		8D9D3EF5213DF2B000087E46 /* LoggingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EF4213DF2B000087E46 /* LoggingContext.swift */; };
+		8D9D3EF7213DF36100087E46 /* JSONLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EF6213DF36100087E46 /* JSONLogger.swift */; };
+		8D9D3EF9213DF36E00087E46 /* BonjourLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EF8213DF36E00087E46 /* BonjourLogger.swift */; };
+		8D9D3EFB213DF3F300087E46 /* ContextStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D3EFA213DF3F300087E46 /* ContextStore.swift */; };
 		8DB4FB2B213D0A8000E38B5C /* Journal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DB4FB21213D0A8000E38B5C /* Journal.framework */; };
-		8DB4FB30213D0A8000E38B5C /* JournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB4FB2F213D0A8000E38B5C /* JournalTests.swift */; };
 		8DB4FB32213D0A8000E38B5C /* Journal.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB4FB24213D0A8000E38B5C /* Journal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -23,11 +42,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D7D3DEF214D91EA00AEC329 /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
+		8D7D3DF2214D921000AEC329 /* AnyEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		8D7D3DF4214D922100AEC329 /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		8D7D3DF7214D9CBF00AEC329 /* JSONLogSerializerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLogSerializerTests.swift; sourceTree = "<group>"; };
+		8D7D3DF9214DA67500AEC329 /* DefaultSerializationFileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSerializationFileProvider.swift; sourceTree = "<group>"; };
+		8D7D3DFC214DB3A200AEC329 /* SerializationFileProviderMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializationFileProviderMock.swift; sourceTree = "<group>"; };
+		8D7D3DFF214DBE7500AEC329 /* json_log_test_single.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = json_log_test_single.log; sourceTree = "<group>"; };
+		8D7D3E01214DC1C000AEC329 /* json_log_test_multiple.log */ = {isa = PBXFileReference; lastKnownFileType = text; path = json_log_test_multiple.log; sourceTree = "<group>"; };
+		8D7D3E04214DCAA000AEC329 /* XCTestCase+Wait.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+Wait.swift"; sourceTree = "<group>"; };
+		8D9D3EAC213D1D0E00087E46 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		8D9D3EAE213D1D2200087E46 /* Journal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Journal.swift; sourceTree = "<group>"; };
+		8D9D3EB0213D234600087E46 /* LogSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogSerializer.swift; sourceTree = "<group>"; };
+		8D9D3EB2213D235800087E46 /* JSONLogSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLogSerializer.swift; sourceTree = "<group>"; };
+		8D9D3EEE213D312800087E46 /* LogMacros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogMacros.swift; sourceTree = "<group>"; };
+		8D9D3EF0213D319000087E46 /* JournalProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalProvider.swift; sourceTree = "<group>"; };
+		8D9D3EF2213DCD8F00087E46 /* SerializationFileProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializationFileProvider.swift; sourceTree = "<group>"; };
+		8D9D3EF4213DF2B000087E46 /* LoggingContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggingContext.swift; sourceTree = "<group>"; };
+		8D9D3EF6213DF36100087E46 /* JSONLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONLogger.swift; sourceTree = "<group>"; };
+		8D9D3EF8213DF36E00087E46 /* BonjourLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourLogger.swift; sourceTree = "<group>"; };
+		8D9D3EFA213DF3F300087E46 /* ContextStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContextStore.swift; sourceTree = "<group>"; };
 		8DB4FB21213D0A8000E38B5C /* Journal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Journal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DB4FB24213D0A8000E38B5C /* Journal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Journal.h; sourceTree = "<group>"; };
 		8DB4FB25213D0A8000E38B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DB4FB2A213D0A8000E38B5C /* JournalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JournalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8DB4FB2F213D0A8000E38B5C /* JournalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalTests.swift; sourceTree = "<group>"; };
 		8DB4FB31213D0A8000E38B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +88,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D7D3DEE214D91C600AEC329 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D3DEF214D91EA00AEC329 /* LogEntry.swift */,
+				8D9D3EF4213DF2B000087E46 /* LoggingContext.swift */,
+				8D7D3DF4214D922100AEC329 /* LogLevel.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		8D7D3DF1214D91FA00AEC329 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D3DF2214D921000AEC329 /* AnyEncodable.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8D7D3DF6214D9CA300AEC329 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D3DF7214D9CBF00AEC329 /* JSONLogSerializerTests.swift */,
+			);
+			path = Serialization;
+			sourceTree = "<group>";
+		};
+		8D7D3DFB214DB38900AEC329 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D3DFC214DB3A200AEC329 /* SerializationFileProviderMock.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		8D7D3DFE214DBE4C00AEC329 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D3DFF214DBE7500AEC329 /* json_log_test_single.log */,
+				8D7D3E01214DC1C000AEC329 /* json_log_test_multiple.log */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8D7D3E03214DCA8700AEC329 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8D7D3E04214DCAA000AEC329 /* XCTestCase+Wait.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8D9D3EB4213D294300087E46 /* Serialization */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D3EB2213D235800087E46 /* JSONLogSerializer.swift */,
+				8D9D3EB0213D234600087E46 /* LogSerializer.swift */,
+				8D9D3EF2213DCD8F00087E46 /* SerializationFileProvider.swift */,
+				8D7D3DF9214DA67500AEC329 /* DefaultSerializationFileProvider.swift */,
+			);
+			path = Serialization;
+			sourceTree = "<group>";
+		};
+		8D9D3EB5213D294B00087E46 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				8D9D3EF8213DF36E00087E46 /* BonjourLogger.swift */,
+				8D9D3EFA213DF3F300087E46 /* ContextStore.swift */,
+				8D9D3EAE213D1D2200087E46 /* Journal.swift */,
+				8D9D3EF0213D319000087E46 /* JournalProvider.swift */,
+				8D9D3EF6213DF36100087E46 /* JSONLogger.swift */,
+				8D9D3EAC213D1D0E00087E46 /* Logger.swift */,
+				8D9D3EEE213D312800087E46 /* LogMacros.swift */,
+			);
+			path = Logging;
+			sourceTree = "<group>";
+		};
 		8DB4FB17213D0A8000E38B5C = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +185,10 @@
 		8DB4FB23213D0A8000E38B5C /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				8D7D3DF1214D91FA00AEC329 /* Utilities */,
+				8D7D3DEE214D91C600AEC329 /* Entities */,
+				8D9D3EB5213D294B00087E46 /* Logging */,
+				8D9D3EB4213D294300087E46 /* Serialization */,
 				8DB4FB24213D0A8000E38B5C /* Journal.h */,
 				8DB4FB25213D0A8000E38B5C /* Info.plist */,
 			);
@@ -80,7 +198,10 @@
 		8DB4FB2E213D0A8000E38B5C /* JournalTests */ = {
 			isa = PBXGroup;
 			children = (
-				8DB4FB2F213D0A8000E38B5C /* JournalTests.swift */,
+				8D7D3E03214DCA8700AEC329 /* Utilities */,
+				8D7D3DFE214DBE4C00AEC329 /* Resources */,
+				8D7D3DFB214DB38900AEC329 /* Mocks */,
+				8D7D3DF6214D9CA300AEC329 /* Serialization */,
 				8DB4FB31213D0A8000E38B5C /* Info.plist */,
 			);
 			path = JournalTests;
@@ -148,6 +269,7 @@
 				TargetAttributes = {
 					8DB4FB20213D0A8000E38B5C = {
 						CreatedOnToolsVersion = 9.4.1;
+						LastSwiftMigration = 0940;
 					};
 					8DB4FB29213D0A8000E38B5C = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -184,6 +306,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7D3E00214DBE7500AEC329 /* json_log_test_single.log in Resources */,
+				8D7D3E02214DC1C000AEC329 /* json_log_test_multiple.log in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +318,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D9D3EF1213D319000087E46 /* JournalProvider.swift in Sources */,
+				8D9D3EAD213D1D0E00087E46 /* Logger.swift in Sources */,
+				8D9D3EB1213D234600087E46 /* LogSerializer.swift in Sources */,
+				8D9D3EF5213DF2B000087E46 /* LoggingContext.swift in Sources */,
+				8D9D3EFB213DF3F300087E46 /* ContextStore.swift in Sources */,
+				8D7D3DF0214D91EA00AEC329 /* LogEntry.swift in Sources */,
+				8D9D3EF7213DF36100087E46 /* JSONLogger.swift in Sources */,
+				8D9D3EB3213D235800087E46 /* JSONLogSerializer.swift in Sources */,
+				8D7D3DF3214D921000AEC329 /* AnyEncodable.swift in Sources */,
+				8D7D3DFA214DA67500AEC329 /* DefaultSerializationFileProvider.swift in Sources */,
+				8D9D3EAF213D1D2200087E46 /* Journal.swift in Sources */,
+				8D9D3EF9213DF36E00087E46 /* BonjourLogger.swift in Sources */,
+				8D7D3DF5214D922100AEC329 /* LogLevel.swift in Sources */,
+				8D9D3EF3213DCD8F00087E46 /* SerializationFileProvider.swift in Sources */,
+				8D9D3EEF213D312800087E46 /* LogMacros.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,7 +340,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8DB4FB30213D0A8000E38B5C /* JournalTests.swift in Sources */,
+				8D7D3DF8214D9CBF00AEC329 /* JSONLogSerializerTests.swift in Sources */,
+				8D7D3DFD214DB3A200AEC329 /* SerializationFileProviderMock.swift in Sources */,
+				8D7D3E05214DCAA000AEC329 /* XCTestCase+Wait.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +480,7 @@
 		8DB4FB36213D0A8000E38B5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -355,6 +497,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.andrashollo.Journal;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -363,6 +506,7 @@
 		8DB4FB37213D0A8000E38B5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -387,6 +531,7 @@
 		8DB4FB39213D0A8000E38B5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JournalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +549,7 @@
 		8DB4FB3A213D0A8000E38B5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = JournalTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
