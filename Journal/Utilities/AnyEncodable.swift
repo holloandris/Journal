@@ -9,12 +9,12 @@
 import UIKit
 
 // Type erasure
-struct AnyEncodable: Encodable {
-    let value: Encodable
-    init(value: Encodable) {
+public struct AnyEncodable: Encodable {
+    private let value: Encodable
+    public init(value: Encodable) {
         self.value = value
     }
-    func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: Encoder) throws {
         try value.encode(to: encoder)
     }
 }

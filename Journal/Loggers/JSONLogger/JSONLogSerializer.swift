@@ -6,7 +6,7 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-public class JSONLogSerializer {
+open class JSONLogSerializer {
     
     private let serializationQueue = DispatchQueue(label: "JournalJSONSerializationQueue")
     private let serializationFileProvider: SerializationFileProvider
@@ -15,7 +15,7 @@ public class JSONLogSerializer {
         self.serializationFileProvider = serializationFileProvider
     }
     
-    public func serialize(logEntry: LogEntry) {
+    open func serialize(logEntry: LogEntry) {
         serializationQueue.async { [weak self] in
             self?.writeToFile(logEntry: logEntry)
         }
@@ -25,8 +25,8 @@ public class JSONLogSerializer {
         do {
             var data = try JSONEncoder().encode(logEntry)
             data.append("\n".data(using: .utf8)!)
-            let filePath = try serializationFileProvider.provideFile()
-            if let fileHandle = try? FileHandle(forWritingTo: filePath) {
+            let fileURL = try serializationFileProvider.provideFileURL()
+            if let fileHandle = try? FileHandle(forWritingTo: fileURL) {
                 defer {
                     fileHandle.closeFile()
                 }
@@ -34,7 +34,7 @@ public class JSONLogSerializer {
                 fileHandle.write(data)
             }
             else {
-                try data.write(to: filePath, options: .atomic)
+                try data.write(to: fileURL, options: .atomic)
             }
         }
         catch {

@@ -6,13 +6,7 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-import UIKit
-
-protocol ContextStoreProtocol {
+protocol ContextStore {
     func addContext(_ context:String)
     func getContext()
-}
-
-class ContextStore {
-    
 }

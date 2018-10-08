@@ -9,12 +9,14 @@
 import Journal
 
 class SerializationFileProviderMock: SerializationFileProvider {
+    
     let path: URL
     
     init() {
         path = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("test_log.log")
     }
-    func provideFile() throws -> URL {
+    
+    func provideFileURL() throws -> URL {
         return path
     }
     

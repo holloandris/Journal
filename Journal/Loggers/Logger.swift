@@ -9,5 +9,5 @@
 public protocol Logger {
     func addContext(contextName:String)
     func setContext(contextName:String, value:String)
-    func log(message:String, level: LogLevel, details: [String: Any], error: Error?)
+    func log(logEntry: LogEntry)
 }

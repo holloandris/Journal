@@ -8,5 +8,4 @@
 
 public protocol LoggingContext: Encodable {
     var name: String { get }
-    var value: String { get set }
 }

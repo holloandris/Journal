@@ -7,28 +7,41 @@
 //
 
 public protocol JournalProtocol {
+    func add(logger: Logger)
     func addContext(_ context:LoggingContext)
     func getContext(contextName:String, value:String)
-    func log(message:String, level: LogLevel, details: [String: Any], error: Error?)
+    func log(message:String, level: LogLevel, details: [String: AnyEncodable], error: Error?)
 }
 
-public class Journal: JournalProtocol {
+open class Journal: JournalProtocol {
     
     private let sessionID = UUID()
     
-    public func addContext(_ context:LoggingContext) {
+    private var loggers = [Logger]()
+    
+    // MARK: - Journal methods
+    
+    open func addContext(_ context:LoggingContext) {
         
     }
     
-    public func getContext(contextName:String, value:String) {
+    open func getContext(contextName:String, value:String) {
         
     }
     
-    public func log(message:String, level: LogLevel, details: [String: Any], error: Error?) {
-        var logEntry = [String: Any]()
-        logEntry["message"] = message
-        logEntry["level"] = level
-        logEntry["details"] = details
+    // MARK: - Loggers
+    
+    open func add(logger: Logger) {
+        loggers.append(logger)
+    }
+    
+    // MARK: - Logging
+    
+    open func log(message:String, level: LogLevel, details: [String: AnyEncodable], error: Error?) {
+        let logEntry = LogEntry(message: message, level: level, details: details)
+        for logger in loggers {
+            logger.log(logEntry: logEntry)
+        }
     }
 
 }

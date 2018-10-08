@@ -10,18 +10,18 @@ public enum DefaultSerializationFileProviderError: Error {
     case fileError
 }
 
-public class DefaultSerializationFileProvider: SerializationFileProvider {
+open class DefaultSerializationFileProvider: SerializationFileProvider {
     
-    public func provideFile() throws -> URL {
+    open func provideFileURL() throws -> URL {
         if let documentDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-            let filename = generateFileName()
+            let filename = generateFilename()
             return documentDirectory.appendingPathComponent("journal_logs").appendingPathComponent(filename)
         } else {
             throw DefaultSerializationFileProviderError.fileError
         }
     }
     
-    private func generateFileName() -> String {
+    private func generateFilename() -> String {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy_MM_dd_HH_mm"
         let dateString = formatter.string(from: Date())

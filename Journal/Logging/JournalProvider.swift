@@ -6,13 +6,11 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-import UIKit
-
-class JournalProvider {
+open class JournalProvider {
     
-    let journal: JournalProtocol = Journal()
+    public let journal: JournalProtocol = Journal()
     
-    static let shared = JournalProvider()
+    public static let shared = JournalProvider()
     
     private init() {}
 
