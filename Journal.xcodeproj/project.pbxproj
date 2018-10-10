@@ -35,6 +35,8 @@
 		8DB4FB32213D0A8000E38B5C /* Journal.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB4FB24213D0A8000E38B5C /* Journal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8DFCF566216BC8DE004537E4 /* ThreadSafeQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF565216BC8DE004537E4 /* ThreadSafeQueue.swift */; };
 		8DFCF568216BD19C004537E4 /* BackgroundTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF567216BD19C004537E4 /* BackgroundTimer.swift */; };
+		8DFCF56A216BDCDD004537E4 /* BonjourBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF569216BDCDD004537E4 /* BonjourBrowser.swift */; };
+		8DFCF56C216BDF2E004537E4 /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFCF56B216BDF2E004537E4 /* Socket.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,8 @@
 		8DB4FB31213D0A8000E38B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8DFCF565216BC8DE004537E4 /* ThreadSafeQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadSafeQueue.swift; sourceTree = "<group>"; };
 		8DFCF567216BD19C004537E4 /* BackgroundTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundTimer.swift; sourceTree = "<group>"; };
+		8DFCF569216BDCDD004537E4 /* BonjourBrowser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourBrowser.swift; sourceTree = "<group>"; };
+		8DFCF56B216BDF2E004537E4 /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			children = (
 				8D9D3EF8213DF36E00087E46 /* BonjourLogger.swift */,
 				8D51D826216AEC22000B195A /* BonjourManager.swift */,
+				8DFCF569216BDCDD004537E4 /* BonjourBrowser.swift */,
 			);
 			path = BonjourLogger;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				8D7D3DF2214D921000AEC329 /* AnyEncodable.swift */,
 				8DFCF565216BC8DE004537E4 /* ThreadSafeQueue.swift */,
 				8DFCF567216BD19C004537E4 /* BackgroundTimer.swift */,
+				8DFCF56B216BDF2E004537E4 /* Socket.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -367,6 +373,7 @@
 				8D9D3EB1213D234600087E46 /* LogSerializer.swift in Sources */,
 				8D9D3EF5213DF2B000087E46 /* LoggingContext.swift in Sources */,
 				8D9D3EFB213DF3F300087E46 /* ContextStore.swift in Sources */,
+				8DFCF56C216BDF2E004537E4 /* Socket.swift in Sources */,
 				8D7D3DF0214D91EA00AEC329 /* LogEntry.swift in Sources */,
 				8D9D3EF7213DF36100087E46 /* JSONLogger.swift in Sources */,
 				8D9D3EB3213D235800087E46 /* JSONLogSerializer.swift in Sources */,
@@ -376,6 +383,7 @@
 				8D9D3EAF213D1D2200087E46 /* Journal.swift in Sources */,
 				8D685AE9214E43E000BEC010 /* DefaultContextStore.swift in Sources */,
 				8DFCF566216BC8DE004537E4 /* ThreadSafeQueue.swift in Sources */,
+				8DFCF56A216BDCDD004537E4 /* BonjourBrowser.swift in Sources */,
 				8D9D3EF9213DF36E00087E46 /* BonjourLogger.swift in Sources */,
 				8D51D82A216AF069000B195A /* InternalLogging.swift in Sources */,
 				8D7D3DF5214D922100AEC329 /* LogLevel.swift in Sources */,
