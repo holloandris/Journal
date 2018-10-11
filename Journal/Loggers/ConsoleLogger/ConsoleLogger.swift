@@ -1,12 +1,12 @@
 //
-//  JSONLogger.swift
+//  ConsoleLogger.swift
 //  Journal
 //
-//  Created by Andras Hollo on 2018. 09. 03..
+//  Created by Andras Hollo on 2018. 10. 10..
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-open class JSONLogger: Logger {
+open class ConsoleLogger: Logger {
     
     private var contextStore: ContextStore?
     
@@ -19,7 +19,7 @@ open class JSONLogger: Logger {
     // MARK: - Logger
     
     open func log(logEntry: LogEntry) {
-        
+        print(logEntry.level.rawValue.capitalized + ": " + logEntry.message)
     }
     
     open func setContextStore(_ contextStore: ContextStore) {

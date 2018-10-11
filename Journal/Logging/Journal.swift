@@ -18,6 +18,7 @@ open class Journal: JournalProtocol {
     private let sessionID = UUID()
     
     private var loggers = [Logger]()
+    private var contextStore = DefaultContextStore()
     
     // MARK: - Journal methods
     
@@ -33,6 +34,7 @@ open class Journal: JournalProtocol {
     
     open func add(logger: Logger) {
         loggers.append(logger)
+        logger.setContextStore(contextStore)
     }
     
     // MARK: - Logging

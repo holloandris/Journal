@@ -6,8 +6,6 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-import Foundation
-
 class BackgroundTimer {
     
     // MARK: - Public properties

@@ -6,8 +6,6 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-import Foundation
-
 class BonjourManager: BonjourBrowserDelegate, SocketDelegate {
     
     var handleMessageArrived: ((String) -> Void)?

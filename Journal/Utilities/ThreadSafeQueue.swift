@@ -6,8 +6,6 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-import Foundation
-
 public class ThreadSafeQueue<T> {
     
     // MARK: - Private properties

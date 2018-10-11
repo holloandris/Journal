@@ -6,14 +6,14 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-class DefaultContextStore: ContextStore {
+open class DefaultContextStore: ContextStore {
     
-    func addContext(_ context: String) {
+    public func setContext(_ context: LoggingContext, toValue value: Encodable) {
         
     }
     
-    func getContext() {
-        
+    public func getContextValue(_ context: LoggingContext) -> Encodable {
+        return ""
     }
 
 }

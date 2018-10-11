@@ -6,8 +6,6 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-import Foundation
-
 protocol SocketDelegate: AnyObject {
     func socketDidConnect()
     func socketDidDisconnect()

@@ -6,8 +6,6 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-import UIKit
-
 // Type erasure
 public struct AnyEncodable: Encodable {
     private let value: Encodable

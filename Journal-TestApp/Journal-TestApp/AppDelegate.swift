@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Setup Journal with Bonjour and JSON logger
         JournalProvider.shared.journal.add(logger: BonjourLogger())
+        JournalProvider.shared.journal.add(logger: ConsoleLogger())
         JournalProvider.shared.journal.add(logger: JSONLogger())
         
         return true

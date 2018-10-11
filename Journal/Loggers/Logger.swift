@@ -7,7 +7,6 @@
 //
 
 public protocol Logger {
-    func addContext(contextName:String)
-    func setContext(contextName:String, value:String)
     func log(logEntry: LogEntry)
+    func setContextStore(_ contextStore: ContextStore)
 }

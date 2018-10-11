@@ -7,9 +7,9 @@
 //
 
 public struct LogEntry: Encodable {
-    private let message: String
-    private let level: LogLevel
-    private let details: [String: AnyEncodable]
+    public let message: String
+    public let level: LogLevel
+    public let details: [String: AnyEncodable]
     init(message: String,
          level: LogLevel,
          details: [String: AnyEncodable]) {

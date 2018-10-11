@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D0E69FB216F066C007A0C9C /* ConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0E69FA216F066C007A0C9C /* ConsoleLogger.swift */; };
 		8D51D827216AEC22000B195A /* BonjourManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51D826216AEC22000B195A /* BonjourManager.swift */; };
 		8D51D82A216AF069000B195A /* InternalLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D51D829216AF069000B195A /* InternalLogging.swift */; };
 		8D685AE7214E3E1800BEC010 /* DefaultSerializationFileProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D685AE6214E3E1800BEC010 /* DefaultSerializationFileProviderTests.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8D0E69FA216F066C007A0C9C /* ConsoleLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLogger.swift; sourceTree = "<group>"; };
 		8D51D826216AEC22000B195A /* BonjourManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonjourManager.swift; sourceTree = "<group>"; };
 		8D51D829216AF069000B195A /* InternalLogging.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternalLogging.swift; sourceTree = "<group>"; };
 		8D685AE6214E3E1800BEC010 /* DefaultSerializationFileProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSerializationFileProviderTests.swift; sourceTree = "<group>"; };
@@ -104,9 +106,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8D0E69F9216F0651007A0C9C /* ConsoleLogger */ = {
+			isa = PBXGroup;
+			children = (
+				8D0E69FA216F066C007A0C9C /* ConsoleLogger.swift */,
+			);
+			path = ConsoleLogger;
+			sourceTree = "<group>";
+		};
 		8D51D823216AEBB0000B195A /* Loggers */ = {
 			isa = PBXGroup;
 			children = (
+				8D0E69F9216F0651007A0C9C /* ConsoleLogger */,
 				8D51D825216AEBC1000B195A /* JSONLogger */,
 				8D51D824216AEBB5000B195A /* BonjourLogger */,
 				8D9D3EAC213D1D0E00087E46 /* Logger.swift */,
@@ -380,6 +391,7 @@
 				8D7D3DF3214D921000AEC329 /* AnyEncodable.swift in Sources */,
 				8D51D827216AEC22000B195A /* BonjourManager.swift in Sources */,
 				8D7D3DFA214DA67500AEC329 /* DefaultSerializationFileProvider.swift in Sources */,
+				8D0E69FB216F066C007A0C9C /* ConsoleLogger.swift in Sources */,
 				8D9D3EAF213D1D2200087E46 /* Journal.swift in Sources */,
 				8D685AE9214E43E000BEC010 /* DefaultContextStore.swift in Sources */,
 				8DFCF566216BC8DE004537E4 /* ThreadSafeQueue.swift in Sources */,

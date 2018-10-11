@@ -6,6 +6,6 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-public protocol LoggingContext: Encodable {
-    var name: String { get }
+public protocol LoggingContext {
+    var identifier: String { get }
 }

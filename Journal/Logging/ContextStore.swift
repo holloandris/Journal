@@ -6,7 +6,7 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-protocol ContextStore {
-    func addContext(_ context:String)
-    func getContext()
+public protocol ContextStore {
+    func setContext(_ context: LoggingContext, toValue value: Encodable)
+    func getContextValue(_ context: LoggingContext) -> Encodable
 }
