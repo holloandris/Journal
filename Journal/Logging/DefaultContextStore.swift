@@ -8,12 +8,16 @@
 
 open class DefaultContextStore: ContextStore {
     
+    private var storage = [String: AnyEncodable]()
+    
+    // MARK: - ContextStore
+    
     public func setContext(_ context: LoggingContext, toValue value: Encodable) {
-        
+        storage[context.identifier] = AnyEncodable(value: value)
     }
     
     public func getContextValue(_ context: LoggingContext) -> Encodable {
-        return ""
+        return storage[context.identifier] ?? ""
     }
 
 }
