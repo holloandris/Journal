@@ -9,12 +9,6 @@
 import Foundation
 import Journal
 
-enum TestAppLoggingContext: String, LoggingContext {
-    case loggedInUser = "logged_in_user"
-    case playedSong = "played_song"
-    
-    var identifier: String {
-        return self.rawValue
-    }
+struct TestAppLoggingContext: LoggingContext {
+    var identifier = ""
 }
-

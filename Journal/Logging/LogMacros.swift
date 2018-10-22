@@ -10,22 +10,22 @@ public func context(name: String, value: String) {
     
 }
 
-public func error(message: String, error: Error, details: [String: AnyEncodable]?) {
+public func error(message: String, error: Error, details: [String: AnyEncodable]? = nil) {
     JournalProvider.shared.journal.log(message: message, level: .error, details: details ?? [:], error: error)
 }
 
-public func warning(message: String, details: [String: AnyEncodable]?) {
+public func warning(message: String, details: [String: AnyEncodable]? = nil) {
     JournalProvider.shared.journal.log(message: message, level: .warning, details: details ?? [:], error: nil)
 }
 
-public func info(message: String, details: [String: AnyEncodable]?) {
+public func info(message: String, details: [String: AnyEncodable]? = nil) {
     JournalProvider.shared.journal.log(message: message, level: .warning, details: details ?? [:], error: nil)
 }
 
-public func debug(message: String, details: [String: AnyEncodable]?) {
+public func debug(message: String, details: [String: AnyEncodable]? = nil) {
     JournalProvider.shared.journal.log(message: message, level: .info, details: details ?? [:], error: nil)
 }
 
-public func verbose(message: String, details: [String: AnyEncodable]?) {
+public func verbose(message: String, details: [String: AnyEncodable]? = nil) {
     JournalProvider.shared.journal.log(message: message, level: .verbose, details: details ?? [:], error: nil)
 }

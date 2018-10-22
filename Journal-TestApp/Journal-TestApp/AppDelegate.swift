@@ -15,6 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        setupLogging()
+        
+        return true
+    }
+    
+    // MARK: - Private helper methods
+    
+    private func setupLogging() {
         // Setup Journal with Bonjour and JSON logger
         JournalProvider.shared.journal.add(logger: BonjourLogger())
         JournalProvider.shared.journal.add(logger: ConsoleLogger())
@@ -22,8 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         JournalProvider.shared.journal.add(loggingContextProvider: AppSessionLoggingContextProvider())
         JournalProvider.shared.journal.add(loggingDetailProvider: TimeLoggingDetailProvider())
         JournalProvider.shared.journal.add(loggingDetailProvider: ClassLoggingDetailProvider())
-        
-        return true
     }
 
 }

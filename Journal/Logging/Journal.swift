@@ -53,6 +53,9 @@ open class Journal: JournalProtocol {
     
     open func log(message:String, level: LogLevel, details: [String: AnyEncodable], error: Error?) {
         var mutableDetails = details
+        if let error = error {
+            mutableDetails["Error"] = AnyEncodable(value: "\(error)")
+        }
         for loggingDetailProvider in loggingDetailProviders {
             mutableDetails.merge(loggingDetailProvider.provideDetails()) { (current, new) in
                 internalLogVerbose("Current: \(current) new: \(new)")

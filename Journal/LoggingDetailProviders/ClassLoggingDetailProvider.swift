@@ -8,7 +8,7 @@
 
 open class ClassLoggingDetailProvider: LoggingDetailProvider {
     
-    public var skipLevel: UInt = 2
+    public var skipLevel: UInt = 5
     
     public let loggingDetailStringID = "Class"
     
