@@ -85,25 +85,27 @@ class Socket: NSObject, StreamDelegate {
     
     public func stream(_ aStream: Stream, handle eventCode: Stream.Event) {
         switch eventCode {
-        case Stream.Event.hasBytesAvailable:
-            internalLogDebug("Socket has bytes available")
-            readAvailableBytes(stream: aStream as! InputStream)
-        case Stream.Event.endEncountered:
-            internalLogDebug("End signal received on socket")
-            connected = false
-            delegate?.socketDidDisconnect()
-        case Stream.Event.errorOccurred:
-            internalLogError("Error happened on socket")
-            connected = false
-            delegate?.socketDidDisconnect()
+        case Stream.Event.openCompleted:
+            internalLogInfo("Socket opening completed")
         case Stream.Event.hasSpaceAvailable:
             internalLogDebug("Socket has space available")
             if !connected {
                 connected = true
                 delegate?.socketDidConnect()
             }
+        case Stream.Event.hasBytesAvailable:
+            internalLogDebug("Socket has bytes available")
+            readAvailableBytes(stream: aStream as! InputStream)
+        case Stream.Event.endEncountered:
+            internalLogInfo("End signal received on socket")
+            connected = false
+            delegate?.socketDidDisconnect()
+        case Stream.Event.errorOccurred:
+            internalLogError("Error happened on socket")
+            connected = false
+            delegate?.socketDidDisconnect()
         default:
-            internalLogDebug("Unknown event happened")
+            internalLogDebug("Unknown event happened with socket")
             break
         }
     }

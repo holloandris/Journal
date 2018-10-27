@@ -1,5 +1,5 @@
 //
-//  AnyEncodable.swift
+//  AnyCodable.swift
 //  Journal
 //
 //  Created by Andras Hollo on 2018. 09. 15..
@@ -7,14 +7,18 @@
 //
 
 // Type erasure
-public struct AnyEncodable: Encodable, CustomStringConvertible {
+public struct AnyCodable: Codable, CustomStringConvertible {
     
-    private let value: Encodable
+    private let value: Codable
     
     // MARK: - Lifecycle methods
     
-    public init(value: Encodable) {
+    public init(value: Codable) {
         self.value = value
+    }
+    
+    public init(from decoder: Decoder) throws {
+        value = ""
     }
     
     // MARK: - Encodable

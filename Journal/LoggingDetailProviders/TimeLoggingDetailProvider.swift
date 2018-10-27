@@ -21,9 +21,9 @@ open class TimeLoggingDetailProvider: LoggingDetailProvider {
     
     // MARK: LoggingDetailProvider
     
-    open func provideDetails() -> [String: AnyEncodable] {
+    open func provideDetails() -> [String: AnyCodable] {
         let dateString = dateFormatter.string(from: Date())
-        return [loggingDetailStringID: AnyEncodable(value: dateString)]
+        return [loggingDetailStringID: AnyCodable(value: dateString)]
     }
     
 }

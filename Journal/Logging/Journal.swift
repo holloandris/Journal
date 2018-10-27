@@ -10,8 +10,8 @@ public protocol JournalProtocol {
     func add(logger: Logger)
     func add(loggingContextProvider: LoggingContextProvider)
     func add(loggingDetailProvider: LoggingDetailProvider)
-    func setContext(_ context: LoggingContext, toValue value: Encodable)
-    func log(message:String, level: LogLevel, details: [String: AnyEncodable], error: Error?)
+    func setContext(_ context: LoggingContext, toValue value: Codable)
+    func log(message:String, level: LogLevel, details: [String: AnyCodable], error: Error?)
 }
 
 open class Journal: JournalProtocol {
@@ -25,7 +25,7 @@ open class Journal: JournalProtocol {
     
     // MARK: - Journal methods
     
-    open func setContext(_ context: LoggingContext, toValue value: Encodable) {
+    open func setContext(_ context: LoggingContext, toValue value: Codable) {
         contextStore.setContext(context, toValue: value)
     }
     
@@ -51,10 +51,10 @@ open class Journal: JournalProtocol {
     
     // MARK: - Logging
     
-    open func log(message:String, level: LogLevel, details: [String: AnyEncodable], error: Error?) {
+    open func log(message:String, level: LogLevel, details: [String: AnyCodable], error: Error?) {
         var mutableDetails = details
         if let error = error {
-            mutableDetails["Error"] = AnyEncodable(value: "\(error)")
+            mutableDetails["Error"] = AnyCodable(value: "\(error)")
         }
         for loggingDetailProvider in loggingDetailProviders {
             mutableDetails.merge(loggingDetailProvider.provideDetails()) { (current, new) in
