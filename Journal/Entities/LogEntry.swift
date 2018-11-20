@@ -6,13 +6,13 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-public struct LogEntry: Encodable {
+public struct LogEntry: Codable {
     public let message: String
     public let level: LogLevel
-    public let details: [String: AnyCodable]
+    public let details: [String: String]
     init(message: String,
          level: LogLevel,
-         details: [String: AnyCodable]) {
+         details: [String: String]) {
         self.message = message
         self.level = level
         self.details = details

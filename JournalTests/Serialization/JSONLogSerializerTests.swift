@@ -29,7 +29,7 @@ class JSONLogSerializerTests: XCTestCase {
     
     func testJSONSerialization() {
         // Given
-        let logEntry = LogEntry(message: "Example message", level: .debug, details: ["Test": AnyCodable(value: 6)])
+        let logEntry = LogEntry(message: "Example message", level: .debug, details: ["Test": "6"])
         
         // When
         sut.serialize(logEntry: logEntry)
@@ -48,8 +48,8 @@ class JSONLogSerializerTests: XCTestCase {
     
     func testMultipleJSONSerialization() {
         // Given
-        let logEntry = LogEntry(message: "Example message", level: .debug, details: ["Test": AnyCodable(value: 6)])
-        let logEntry2 = LogEntry(message: "Example message 2", level: .debug, details: ["Test": AnyCodable(value: 7)])
+        let logEntry = LogEntry(message: "Example message", level: .debug, details: ["Test": "6"])
+        let logEntry2 = LogEntry(message: "Example message 2", level: .debug, details: ["Test": "7"])
         
         // When
         sut.serialize(logEntry: logEntry)

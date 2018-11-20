@@ -7,6 +7,6 @@
 //
 
 public protocol ContextStore {
-    func setContext(_ context: LoggingContext, toValue value: Codable)
-    func getContextValue(_ context: LoggingContext) -> Codable
+    func setContext(_ context: LoggingContext, toValue value: String)
+    func getContextValue(_ context: LoggingContext) -> String
 }

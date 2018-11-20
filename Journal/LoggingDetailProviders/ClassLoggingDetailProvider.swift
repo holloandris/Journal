@@ -18,14 +18,14 @@ open class ClassLoggingDetailProvider: LoggingDetailProvider {
     
     // MARK: LoggingDetailProvider
     
-    open func provideDetails() -> [String: AnyCodable] {
+    open func provideDetails() -> [String: String] {
         let stackSymbols = Thread.callStackSymbols
         if (stackSymbols.count > skipLevel) {
             if let callerClass = CallStackParser.classAndMethodForStackSymbol(stackSymbols[Int(skipLevel)], includeImmediateParentClass: true)?.0 {
-                return [loggingDetailStringID: AnyCodable(value: callerClass)]
+                return [loggingDetailStringID: callerClass]
             }
         }
-        return [loggingDetailStringID: AnyCodable(value: "Unavailable")]
+        return [loggingDetailStringID: "Unavailable"]
     }
     
 }

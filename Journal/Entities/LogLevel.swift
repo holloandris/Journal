@@ -6,7 +6,7 @@
 //  Copyright © 2018. Andras Hollo. All rights reserved.
 //
 
-public enum LogLevel: String, Encodable {
+public enum LogLevel: String, Codable {
     case error
     case warning
     case info

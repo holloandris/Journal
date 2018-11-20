@@ -30,7 +30,7 @@ open class AppSessionLoggingContextProvider: LoggingContextProvider {
     
     open func setContextStore(_ contextStore: ContextStore) {
         self.contextStore = contextStore
-        contextStore.setContext(AppSessionLoggingContext.appSession, toValue: sessionID)
+        contextStore.setContext(AppSessionLoggingContext.appSession, toValue: sessionID.uuidString)
     }
     
 }

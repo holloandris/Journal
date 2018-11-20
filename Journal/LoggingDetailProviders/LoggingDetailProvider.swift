@@ -8,5 +8,5 @@
 
 public protocol LoggingDetailProvider {
     var loggingDetailStringID: String { get }
-    func provideDetails() -> [String: AnyCodable]
+    func provideDetails() -> [String: String]
 }

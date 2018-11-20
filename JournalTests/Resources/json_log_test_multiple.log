@@ -1,2 +1,2 @@
-{"message":"Example message","level":"debug","details":{"Test":6}}
-{"message":"Example message 2","level":"debug","details":{"Test":7}}
+{"message":"Example message","level":"debug","details":{"Test":"6"}}
+{"message":"Example message 2","level":"debug","details":{"Test":"7"}}
