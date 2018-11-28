@@ -19,11 +19,11 @@ public func warning(message: String, details: [String: String]? = nil) {
 }
 
 public func info(message: String, details: [String: String]? = nil) {
-    JournalProvider.shared.journal.log(message: message, level: .warning, details: details ?? [:], error: nil)
+    JournalProvider.shared.journal.log(message: message, level: .info, details: details ?? [:], error: nil)
 }
 
 public func debug(message: String, details: [String: String]? = nil) {
-    JournalProvider.shared.journal.log(message: message, level: .info, details: details ?? [:], error: nil)
+    JournalProvider.shared.journal.log(message: message, level: .debug, details: details ?? [:], error: nil)
 }
 
 public func verbose(message: String, details: [String: String]? = nil) {
