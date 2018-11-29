@@ -2,7 +2,10 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:Journal-TestApp/Journal-TestApp.xcodeproj">
+      location = "group:Journal.podspec">
+   </FileRef>
+   <FileRef
+      location = "group:Journal-TestApp.xcodeproj">
    </FileRef>
    <FileRef
       location = "container:Journal.xcodeproj">

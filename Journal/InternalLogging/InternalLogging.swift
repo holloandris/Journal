@@ -17,9 +17,11 @@ enum InternalLogLevel: Int {
 let internalLogVerbosity = InternalLogLevel.verbose
 
 func internalLog(level: InternalLogLevel, message: String) {
+    #if DEBUG
     if internalLogVerbosity.rawValue <= level.rawValue {
         print(message)
     }
+    #endif
 }
 
 func internalLogError(_ message: String) {
