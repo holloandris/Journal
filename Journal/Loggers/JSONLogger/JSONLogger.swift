@@ -8,8 +8,6 @@
 
 open class JSONLogger: Logger {
     
-    private var contextStore: ContextStore?
-    
     // MARK: - Lifecycle methods
     
     public init() {
@@ -20,10 +18,6 @@ open class JSONLogger: Logger {
     
     open func log(logEntry: LogEntry) {
         
-    }
-    
-    open func setContextStore(_ contextStore: ContextStore) {
-        self.contextStore = contextStore
     }
     
 }

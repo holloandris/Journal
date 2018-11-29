@@ -8,8 +8,6 @@
 
 open class ConsoleLogger: Logger {
     
-    private var contextStore: ContextStore?
-    
     var format: String = "{Time} {Level} {Class} {Message}"
     
     // MARK: - Lifecycle methods
@@ -22,10 +20,6 @@ open class ConsoleLogger: Logger {
     
     open func log(logEntry: LogEntry) {
         print(replacePlaceholders(logEntry: logEntry))
-    }
-    
-    open func setContextStore(_ contextStore: ContextStore) {
-        self.contextStore = contextStore
     }
     
     // MARK: - Private helper methods

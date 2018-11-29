@@ -12,7 +12,6 @@ open class BonjourLogger: Logger {
     private var logEntryQueue = ThreadSafeQueue<LogEntry>()
     private let backgroundSenderQueue = DispatchQueue(label: "JournalBonjourSenderQueue")
     private let backgroundSenderTimer: BackgroundTimer
-    private var contextStore: ContextStore?
     
     // MARK: - Lifecycle methods
     
@@ -29,10 +28,6 @@ open class BonjourLogger: Logger {
     
     open func log(logEntry: LogEntry) {
         logEntryQueue.enqueue(logEntry)
-    }
-    
-    open func setContextStore(_ contextStore: ContextStore) {
-        self.contextStore = contextStore
     }
     
     // MARK: - Private helper methods

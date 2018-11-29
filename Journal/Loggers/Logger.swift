@@ -8,5 +8,4 @@
 
 public protocol Logger {
     func log(logEntry: LogEntry)
-    func setContextStore(_ contextStore: ContextStore)
 }

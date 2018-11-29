@@ -46,7 +46,6 @@ open class Journal: JournalProtocol {
     
     open func add(logger: Logger) {
         loggers.append(logger)
-        logger.setContextStore(contextStore)
     }
     
     // MARK: - Logging
@@ -60,8 +59,11 @@ open class Journal: JournalProtocol {
             mutableDetails.merge(loggingDetailProvider.provideDetails()) { (current, new) in
                 internalLogVerbose("Current: \(current) new: \(new)")
                 return current
-                
             }
+        }
+        mutableDetails.merge(contextStore.contexts) { (current, new) in
+            internalLogVerbose("Current: \(current) new: \(new)")
+            return current
         }
         let logEntry = LogEntry(message: message, level: level, details: mutableDetails)
         for logger in loggers {
