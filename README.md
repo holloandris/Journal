@@ -16,7 +16,7 @@ platform :ios, '10.0'
 # You need to set target when you use CocoaPods 1.0.0 or later.
 target 'SampleTarget' do
   use_frameworks!
-  pod 'holloandris/Journal'
+  pod 'Journal'
 end
 ```
 

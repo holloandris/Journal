@@ -11,5 +11,6 @@ Pod::Spec.new do |s|
   s.author       = { "Andras Hollo" => "hollo.andris@gmail.com" }
   s.platform     = :ios
   s.source       = { :git => "https://github.com/holloandris/Journal.git", :tag => "v#{s.version}" }
-  s.source_files = "Journal"
+  s.source_files = "Journal/**/*.swift"
+  s.ios.deployment_target = "10.0"
 end
