@@ -23,15 +23,15 @@ class MainViewController: UIViewController {
     @IBAction func sendLogTouched(_ sender: Any) {
         switch logLevelSegmentedControl.selectedSegmentIndex {
         case 0:
-            verbose(message: logTextTextField.text ?? "")
+            verbose(logTextTextField.text ?? "")
         case 1:
-            debug(message: logTextTextField.text ?? "")
+            debug(logTextTextField.text ?? "")
         case 2:
-            info(message: logTextTextField.text ?? "")
+            info(logTextTextField.text ?? "")
         case 3:
-            warning(message: logTextTextField.text ?? "")
+            warning(logTextTextField.text ?? "")
         case 4:
-            error(message: logTextTextField.text ?? "", error: NSError(domain: "Example", code: 1, userInfo: nil))
+            error(logTextTextField.text ?? "", NSError(domain: "Example", code: 1, userInfo: nil))
         default: ()
         }
     }

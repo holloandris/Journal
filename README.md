@@ -1,8 +1,6 @@
 # Journal
 
-Have you ever run into this issue?
-
-Journal is a gives you a new way to think about logging in your application. You can log everything to the Journal Client application, where you can filter your logs to only see the relevant loglines.
+Journal gives you a new way to think about logging in your application. You can log everything to the Journal Client application, where you can filter your logs to only see the relevant loglines.
 
 It has all the needed logging features, so you can use it as the primary logging library in your application.
 
@@ -10,9 +8,25 @@ It has all the needed logging features, so you can use it as the primary logging
 
 ## Cocoapods
 
+Update your Podfile similarly:
+
+```ruby
+platform :ios, '10.0'
+
+# You need to set target when you use CocoaPods 1.0.0 or later.
+target 'SampleTarget' do
+  use_frameworks!
+  pod 'holloandris/Journal'
+end
+```
+
 ## Carthage
 
-## Framework
+Add to your Cartfile:
+
+```
+github "holloandris/Journal"
+```
 
 # Usage
 
@@ -20,7 +34,7 @@ It has all the needed logging features, so you can use it as the primary logging
 
 Starting to use Journal is easy. Just add the Loggers and LoggingDetailProviders which you would like to use, and then use the five logging functions to log on the different logging levels:
 
-``` swift
+```swift
 func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
     JournalProvider.shared.journal.add(logger: BonjourLogger())
     JournalProvider.shared.journal.add(logger: ConsoleLogger())
@@ -30,6 +44,26 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
     return true
 }
 
+```
+
+Logging from a class only needs the Journal to be imported, then you can use the macro functions:
+
+```swift
+import Journal
+
+class ExampleViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        error("Failed to load ExampleViewController", .customError)
+        warning("Failed to load some resource")
+        info("Example screen visible")
+        debug("ExampleViewController was loaded")
+        verbose("Called viewDidLoad()")
+    }
+    
+}
 ```
 
 ## Journal Client application
