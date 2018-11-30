@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "Andras Hollo" => "hollo.andris@gmail.com" }
   s.platform     = :ios
-  s.source       = { :git => "https://github.com/holloandris/Journal.git", :tag => "#{s.version}" }
+  s.source       = { :git => "https://github.com/holloandris/Journal.git", :tag => "v#{s.version}" }
   s.source_files = "Journal"
 end
