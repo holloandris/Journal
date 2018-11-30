@@ -68,7 +68,7 @@ class ExampleViewController: UIViewController {
 
 ## Journal Client application
 
-Download the Journal Client application: https://github.com/holloandris/JournalClient/releases/download/v0.9.0/JournalClient.app.zip
+Download the Journal Client application: https://github.com/holloandris/JournalClient/releases/download/v0.9.1/JournalClient.app.zip
 
 Open the Journal Client application. It will immediately look for a running application which uses Journal, and after finding it it automatically connects.
 
