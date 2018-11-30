@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Journal"
-  s.version      = "0.9.0"
+  s.version      = "0.9.1"
   s.summary      = "The modern way of logging on iOS."
   s.description  = <<-DESC
                    Journal is an iOS logging library with a desktop client application to help
