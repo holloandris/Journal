@@ -14,7 +14,21 @@
 		8D51D816216A8BD0000B195A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8D51D815216A8BD0000B195A /* Assets.xcassets */; };
 		8D51D819216A8BD0000B195A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D51D817216A8BD0000B195A /* LaunchScreen.storyboard */; };
 		8D51D822216A8C0C000B195A /* Journal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D51D821216A8C0C000B195A /* Journal.framework */; };
+		8D92D6CA21EC1C4C0070099F /* Journal.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8D51D821216A8C0C000B195A /* Journal.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		8D92D6C921EC1C400070099F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8D92D6CA21EC1C4C0070099F /* Journal.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		8D0E69F0216F045D007A0C9C /* TestAppLoggingContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAppLoggingContext.swift; sourceTree = "<group>"; };
@@ -113,6 +127,7 @@
 				8D51D807216A8BCC000B195A /* Sources */,
 				8D51D808216A8BCC000B195A /* Frameworks */,
 				8D51D809216A8BCC000B195A /* Resources */,
+				8D92D6C921EC1C400070099F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -323,6 +338,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNDQGX9X6C;
 				INFOPLIST_FILE = "Journal-TestApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,6 +356,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WNDQGX9X6C;
 				INFOPLIST_FILE = "Journal-TestApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

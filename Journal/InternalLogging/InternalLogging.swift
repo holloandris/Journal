@@ -24,8 +24,8 @@ func internalLog(level: InternalLogLevel, message: String) {
     #endif
 }
 
-func internalLogError(_ message: String) {
-    internalLog(level: .error, message: "Error: "+message)
+func internalLogError(_ message: String, error: Error? = nil) {
+    internalLog(level: .error, message: "Error: \(message) \(String(describing: error))")
 }
 
 func internalLogWarn(_ message: String) {

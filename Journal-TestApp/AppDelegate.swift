@@ -27,6 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         JournalProvider.shared.journal.add(logger: BonjourLogger())
         JournalProvider.shared.journal.add(logger: ConsoleLogger())
         JournalProvider.shared.journal.add(logger: JSONLogger())
+        JournalProvider.shared.journal.add(logger: LogzIOLogger(endpoint: "https://listener.logz.io:8071/", token: "token", type: "ios"))
         JournalProvider.shared.journal.add(loggingContextProvider: AppSessionLoggingContextProvider())
         JournalProvider.shared.journal.add(loggingDetailProvider: TimeLoggingDetailProvider())
         JournalProvider.shared.journal.add(loggingDetailProvider: ClassLoggingDetailProvider())
